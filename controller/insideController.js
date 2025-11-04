@@ -5,7 +5,7 @@ const predict = async(req,res) =>{
     try {
         const formData = new FormData();
         formData.append("file",req.file.buffer,req.file.originalname)
-        const response = await axios.post("http://127.0.0.1:8000/predict",formData,{headers:formData.getHeaders()})
+        const response = await axios.post("https://food-101-classifier-model.onrender.com/predict",formData,{headers:formData.getHeaders()})
         res.json({
             message:"File Uploaded Successfully",
             data:response.data
