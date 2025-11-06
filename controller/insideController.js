@@ -29,7 +29,12 @@ const suggestion = async(req,res)=> {
     }
 }
 
+const ping =  async(req, res) => {
+  res.status(200).json({ status: "ok" });
+}
+
 module.exports = {
     predict,
-    suggestion
+    suggestion,
+    ping
 }
